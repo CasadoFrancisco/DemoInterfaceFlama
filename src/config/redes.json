@@ -1,0 +1,25 @@
+{
+    "SocialMedia": [
+      {
+        "icon": "fa-brands fa-facebook",
+        "lavel": "Facebook",
+        "colorIcon":"#1877F2"
+      },
+      {
+        "icon": "fa-brands fa-instagram",
+        "lavel": "Instagram",
+        "colorIcon":"#833AB4"
+      },
+      {
+        "icon": "fa-brands fa-whatsapp",
+        "lavel": "WhatsApp",
+        "colorIcon":"#25D366"
+      }
+    ],
+    "contact": {
+      "icon": "fa-solid fa-mobile-screen",
+      "tel": "+54 00 0000 0000"
+      
+    }
+  }
+  

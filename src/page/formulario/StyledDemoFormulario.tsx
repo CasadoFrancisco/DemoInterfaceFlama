@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { paletColor } from "../../theme/theme";
 import {motion} from "framer-motion"
 
+
 const Container = styled.div`
 display: flex;
 align-items: flex-start;
@@ -25,12 +26,13 @@ font-weight: 600;
 
 `;
 const Br = styled.hr`
+border: none;
 border-top: 3px solid ;
 width: 25px;
 border-radius: 20px;
 color:${paletColor.color};
 `;
-const ContainerTwo = styled.div`
+const Formulario = styled.form`
 display: flex;
 align-items: flex-start;
 justify-content: flex-start;
@@ -38,47 +40,62 @@ flex-direction: column;
 width: 100%;
 background-color: ${paletColor.background};
 flex: 25;
+padding-left: 20px;
+padding-right: 20px;
+gap: 5px;
 `;
-const ContainerRedes = styled(motion.div)`
-cursor: pointer;
-display: flex;
-align-items: center;
-justify-content: flex-start;
-flex-direction: row;
+const Detail = styled.span`
+display: block;
+font-size: 1.2rem;
+font-weight: 500;
+color: ${paletColor.titleColor};
+
+`;
+const InputDetail = styled.label`
+font-size: 12px;
+font-weight: 500;
+color: ${paletColor.titleColor};
+`;
+const Input = styled.input`
+min-height: 42px;
+font-weight: 400;
+font-size: 14px;
+margin: 8px 0;
+border: 1px solid #aaa;
 width: 100%;
-border-bottom: 1px solid #e5e5e5;
-padding: 5px 25px 5px 25px;
-gap: 20px;
-transition: 1s;
-&:hover{
-    background-color: ${paletColor.hover};
+padding: 0 15px;
+border-radius: 5px;
+&:focus{
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 `;
-const I = styled.i`
-font-size: 30px;
-`;
-const ContainerInfo = styled.div``
-const Visit = styled.p`
+const TextTarea = styled.textarea`
 font-weight: 400;
-`
-
-const Redes = styled.h3`
-font-weight: 500;
-`
-const Number = styled.h3`
-font-weight: 500;
-`
+font-size: 14px;
+margin: 8px 0;
+border: 1px solid #aaa;
+width: 100%;
+padding: 10px 15px;
+border-radius: 5px;
+height: 40%;
+&:focus{
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+`;
 const ContainerThree = styled.div`
 display: flex;
 align-items: center;
-justify-content: center;
+justify-content: space-between;
 flex: 2;
 width: 100%;
 padding: 10px 10px;
+gap: 20px;
 `;
 const Button = styled.button`
+
   font-family: 'Raleway', sans-serif;
-  font-weight: 300;
   position: relative;
   border: none;
   background: transparent;
@@ -88,13 +105,14 @@ const Button = styled.button`
   transition: filter 250ms;
   user-select: none;
   touch-action: manipulation;
-  width: 100%;
+  width: 50%;
     &:hover {
       filter: brightness(110%);
     }
     &:focus:not(:focus-visible) {
       outline: none;
     }
+    
 `
 const Shadow = styled.span`
   position: absolute;
@@ -107,6 +125,7 @@ const Shadow = styled.span`
   will-change: transform;
   transform: translateY(2px);
   transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+  
 `
 const Edge = styled.span`
   position: absolute;
@@ -147,8 +166,7 @@ const Front = styled.span`
   }
   @media(max-width: 700px){
 font-size: 0.9rem;
-}
-`;
 
-export {Shadow,Edge ,Front, Container, ContainerOne, Title, Br, ContainerTwo, ContainerRedes, I, ContainerInfo, Visit ,
-Redes,Number,ContainerThree,Button}
+}`
+
+export { Container, ContainerOne, Title, Br, Formulario, ContainerThree, Shadow, Edge, Front, Detail, InputDetail, Input, TextTarea, Button }
